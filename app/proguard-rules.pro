@@ -21,26 +21,6 @@
 #-renamesourcefileattribute SourceFile
 
 
--optimizationpasses 5
--dontusemixedcaseclassnames
--dontskipnonpubliclibraryclasses
--dontpreverify
--verbose
+-keep class com.facebook.shimmer.** { *;}
 
 
--dontwarn android.support.design.**
--keep class android.support.design.** { *; }
--keep interface android.support.design.** { *; }
--keep public class android.support.design.R$* { *; }
-
--keep class com.google.android.gms.**
-
-
--assumenosideeffects class android.util.Log {
-    public static *** d(...);
-    public static *** v(...);
-    public static *** w(...);
-    public static *** i(...);
-}
-
--dontwarn android.support.**
